@@ -1,0 +1,25 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "\"effective-guacamole\" is not an inspiring repository name, my githubbing friends.",
+  "main": "bamazonExec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danger-academy/bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danger-academy/bamazon/issues"
+  },
+  "homepage": "https://github.com/danger-academy/bamazon#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  }
+}
