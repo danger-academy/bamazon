@@ -1,8 +1,13 @@
 // Dependencies (same as exec script)
+require("dotenv").config();
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 const colors = require('colors');
 const Table = require('cli-table');
+
+// Connect to password file
+const keys = require("./keys.js");
+const bamDB = keys.bamDB.pass;
 
 // Connection script
 const connection = mysql.createConnection({
@@ -13,7 +18,7 @@ const connection = mysql.createConnection({
     user: "root",
 
     // Credentials
-    password: "",
+    password: bamDB,
     database: "bamazon"
 });
 
