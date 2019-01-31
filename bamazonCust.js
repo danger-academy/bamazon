@@ -19,7 +19,7 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
-    console.log(colors.cyan("Welcome! You are now connected to the Bamazon Store as " + connection.threadId));
+    console.log(colors.cyan("Welcome! You are now connected to the Bamazon Store as User ID " + connection.threadId));
     //connection.end();
 
     //Calls main function
@@ -55,12 +55,12 @@ function bamazon() {
         // Prompt Customers Input
         inquirer.prompt([{
                     type: "number",
-                    message: "Please enter the Product ID of the item you wish to purchase?".yellow,
+                    message: "Please enter the Product ID of the item you wish to purchase?".green,
                     name: "id"
                 },
                 {
                     type: "number",
-                    message: "Quantity you wish to purchase?".yellow,
+                    message: "Quantity you wish to purchase?".green,
                     name: "quantity"
                 },
             ])
@@ -78,7 +78,7 @@ function bamazon() {
                     if (selectedItem[0].stock_quantity - quantity >= 0) {
 
                         console.log("INVENTORY AUDIT: Quantity in Stock: ".green + selectedItem[0].stock_quantity +
-                            " Order Quantity: ".green + quantity.yellow);
+                            " Order Quantity: ".yellow + quantity.purple);
 
                         console.log("Success! Bamazon has sufficient inventory of ".green +
                             selectedItem[0].product_name.yellow + " to fill your order!".green);
@@ -104,8 +104,8 @@ function bamazon() {
                     // Low inventory warning
                     else {
                         console.log("LOW INVENTORY WARNING: \nBamazon has only ".red + selectedItem[0].stock_quantity +
-                            " " + selectedItem[0].product_name.cyan + " in stock at this moment. \nPlease make another selection or reduce your quantity.".red,
-                            "\nThank you for shopping at Bamazon!".magenta);
+                            " " + selectedItem[0].product_name.cyan + " in stock at this moment. \nPlease make another selection or reduce your quantity.".red.bold,
+                            "\nThank you for shopping at Bamazon!".yellow.bold);
 
                         // Run the prompt again, so the customer can continue shopping.
                         bamazon();

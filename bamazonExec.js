@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
-    console.log(colors.cyan("You are now connected to bamazon as " + connection.threadId));
+    console.log(colors.cyan("You are now connected to bamazon as User ID " + connection.threadId));
     //connection.end();
 
     //Call main function
@@ -56,12 +56,12 @@ function bamazon() {
         //Prompt Customers Input
         inquirer.prompt([{
                 type: "number",
-                message: "Which item would you like to buy? (Please enter the Product ID)".yellow,
+                message: "Please enter the Product ID of the item you wish to purchase?".green,
                 name: "id"
             },
             {
                 type: "number",
-                message: "How many would you like to buy?".yellow,
+                message: "Quantity you wish to purchase?".green,
                 name: "quantity"
             },
         ])
