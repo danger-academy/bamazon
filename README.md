@@ -16,4 +16,4 @@ Uses [dotenv](https://www.npmjs.com/package/dotenv) to add a layer of data secur
 
 ### Usage Example
 
-<img src="bamazon-gif.gif>
+![bamazon](bamazon-gif.gif)
