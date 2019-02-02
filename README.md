@@ -13,3 +13,7 @@ The initial build (Node.js and MySQL), allowing customer to purchase directly fr
 
 ### Securing API keys
 Uses [dotenv](https://www.npmjs.com/package/dotenv) to add a layer of data security, by storing the relevant password in a separate file 
+
+### Usage Example
+
+<img src="bamazon-gif.gif>
